@@ -5,9 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    body {
+      background: url(akin-cakiner-nkUFXi0JSX8-unsplash.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      height: 1000px;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+    }
+
+    .container h1 {
+      font-size: 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .container p {
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    .container input {
+      font-size: 16px;
+      padding: 13px 10px;
+      width: 100%;
+      border: 0;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .container button {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 20px 0;
+      padding: 10px 15px;
+      width: 50%;
+      border: 0;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .container button:hover {
+      cursor: pointer;
+    }
+
+    .container h2 {
+      font-size: 40px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .btn {
+      display: flex;
+    }
+
+    .btn button {
+      margin: 10px;
+    }
+
     .container {
       max-width: 400px;
       margin: 0 auto;
@@ -140,7 +210,7 @@
 
       if (username === "admin" && password === "123") {
         window.open("admin.html", "_blank");  // Open admin page in a new tab
-        window.location.href = "indexchange.html";  // Redirect current page to indexchange.html
+        window.location.href = "index.html";  // Redirect current page to index.html
         return;
       }
 
@@ -171,7 +241,7 @@
       } else {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('currentUser', JSON.stringify(user));
-        window.location.href = "indexchange.html";
+        window.location.href = "index.html";
       }
     }
 
